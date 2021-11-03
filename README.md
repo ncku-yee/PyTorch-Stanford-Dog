@@ -3,31 +3,6 @@
 ## 先前準備
 * 確認有安裝相關套件，e.g. PyTorch、numpy、pandas、...
 * Ubuntu 20.04 (Focal Fossa) 配 RTX 系列 GPU 安裝 PyTorch 可參考: [連結](https://hackmd.io/@TienYi/PyTorch-TensorFlow-install)
-* 自行下載 datasets，將 `Images` 資料夾的所有資料夾取出放在 `stanford_dog` 的資料夾: [下載連結](http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar)
-* 原始路徑:
-    ```
-    |- images
-        |- Image
-            |- n02085620-Chihuahua
-            |- n02085782-Japanese_spaniel
-                     ‧
-                     ‧
-                     ‧
-                     ‧
-                     ‧
-    ```
-* 修改後路徑:
-    ```
-    |- Stanford_dog
-        |- n02085620-Chihuahua
-        |- n02085782-Japanese_spaniel
-                 ‧
-                 ‧
-                 ‧
-                 ‧
-                 ‧
-    ```
----
 
 ## 1. import 需要的 packages
 ```python=
