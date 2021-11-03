@@ -6,21 +6,21 @@
 
 ## 1. import 需要的 packages
 ```python=
-import os, torch, torchvision, random
-import pandas as pd
+import os, torch
 import numpy as np
 import torch.nn as nn
 import matplotlib.pyplot as plt
 from PIL import Image
 
-import torch.nn.functional as F
 import torchvision.transforms as transforms
 import torchvision.models as models
-from torch.utils.data import Dataset, random_split, DataLoader
+from torch.utils.data import Dataset, DataLoader
 from torchvision.datasets import ImageFolder
 from torchvision import models
 from torch import optim
 from torchsummary import summary
+
+import time
 ```
 ## 2. 確認一下使用 cuda 或是 cpu
 ```python=+
@@ -271,12 +271,16 @@ Cost 121.660(secs)
 
 ## 10. 將每一個 epoch 的 Loss 以及 Training / Testing accuracy 紀錄下來並繪製成圖
 ```python=+
+fig_dir = './fig/'
+if not os.path.isdir(fig_dir):
+    os.makedirs(fig_dir)
+
 plt.figure()
 plt.plot(list(range(epochs)), loss_epoch_C) # plot your loss
 plt.title('Training Loss')
 plt.ylabel('loss'), plt.xlabel('epoch')
 plt.legend(['loss_C'], loc = 'upper left')
-plt.savefig('loss.png')
+plt.savefig(os.path.join(fig_dir, 'loss.png'))
 plt.show()
 
 plt.figure()
@@ -285,8 +289,8 @@ plt.plot(list(range(epochs)), test_acc)     # plot your testing accuracy
 plt.title('Training acc')
 plt.ylabel('acc (%)'), plt.xlabel('epoch')
 plt.legend(['training acc', 'testing acc'], loc = 'upper left')
-plt.savefig('acc.png')
+plt.savefig(os.path.join(fig_dir, 'acc.png'))
 plt.show()
 ```
-![](https://imgur.com/lkI1jgS.png)
-![](https://i.imgur.com/TLTWy5R.png)
+![](https://github.com/ncku-yee/PyTorch-Stanford-Dog/blob/main/fig/loss.png)
+![](https://github.com/ncku-yee/PyTorch-Stanford-Dog/blob/main/fig/acc.png)
