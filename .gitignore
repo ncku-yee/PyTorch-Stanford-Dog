@@ -1,0 +1,8 @@
+# Mac file
+.DS_Store
+
+# vscode
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
