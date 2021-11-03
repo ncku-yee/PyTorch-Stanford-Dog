@@ -1,7 +1,36 @@
 # PyTorch 使用 vgg16 訓練 Stanford Dog Datasets
 
+## 實驗環境
+<table>
+<tr>
+    <td>Operating System</td>
+    <td>Ubuntu 20.04.03 LTS (Focal Fossa)</td>
+</tr>
+<tr>
+    <td>GPU</td>
+    <td>Nvidia RTX 3080</td>
+</tr>
+<tr>
+    <td>Nvidia Driver Version</td>
+    <td>470.74</td>
+</tr>
+<tr>
+    <td>Python Version</td>
+    <td>3.8.10</td>
+</tr>
+<tr>
+    <td>CUDA Version</td>
+    <td>11.1</td>
+</tr>
+<tr>
+    <td>cuDNN Version</td>
+    <td>8.2.0</td>
+</tr>
+</table>
+
 ## 先前準備
 * 確認有安裝相關套件，e.g. PyTorch、numpy、pandas、...
+* 虛擬環境安裝可參考: [連結](https://hackmd.io/@TienYi/python-venv)
 * Ubuntu 20.04 (Focal Fossa) 配 RTX 系列 GPU 安裝 PyTorch 可參考: [連結](https://hackmd.io/@TienYi/PyTorch-TensorFlow-install)
 
 ## 1. import 需要的 packages
