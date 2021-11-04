@@ -45,7 +45,6 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 from torch.utils.data import Dataset, DataLoader
 from torchvision.datasets import ImageFolder
-from torchvision import models
 from torch import optim
 from torchsummary import summary
 
